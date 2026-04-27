@@ -24,7 +24,7 @@ The patient data files (`.pkl`, `.npy`) are not included in this repo for IRB an
 | **PCA + SVM** (linear baseline) | Built and trained the entire pipeline from scratch | 7 to 52% accuracy across 8 patients × 3 phoneme positions |
 | **Seq2Seq RNN** (Cogan et al., 2023) | Used the existing architecture, ran a 40 run hyperparameter sweep (2 learning rates × 2 hidden sizes × 10 folds) | Train 70 to 100% (memorization), Val 17 to 46%, Test 21 to 60% |
 | **MIRepNet** (Wu et al., 2025) | Froze conv and transformer layers, fine tuned the classification head | 12% cross patient (chance level), 55% on unseen trials from the same patient |
-| **Spatiotemporal CNN** (Flinker et al., 2024) | Froze the entire encoder, fine tuned a new classification head | (see Flinker_CNN/ notebooks) |
+| **Spatiotemporal CNN** (Flinker et al., 2024) | Used the pretrained encoder as a frozen feature extractor, fit PCA + SVM / LDA classification heads on top | Best val acc **27.59%** (Encoder + PCA + LDA) on single patient HB02. Encoder features ~2x better than raw ECoG (12 to 14% val with raw, 24 to 28% with encoder) |
 
 ## Repo layout
 
