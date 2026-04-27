@@ -24,7 +24,7 @@ The patient data files (`.pkl`, `.npy`) are not included in this repo for IRB an
 | **PCA + SVM** (linear baseline) | Built and trained the entire pipeline from scratch | 7 to 52% accuracy across 8 patients × 3 phoneme positions |
 | **Seq2Seq RNN** (Cogan et al., 2023) | Used the existing architecture, ran a 40 run hyperparameter sweep (2 learning rates × 2 hidden sizes × 10 folds) | Train 70 to 100% (memorization), Val 17 to 46%, Test 21 to 60% |
 | **MIRepNet** (Wu et al., 2025) | Froze conv and transformer layers, fine tuned the classification head | 12% cross patient (chance level), 55% on unseen trials from the same patient |
-| **Spatiotemporal CNN** (Flinker et al., 2024) | Trained Flinker's full a2a → e2a pipeline on Flinker's HB02 patient (60 epochs each) to produce an encoder, then froze it and fit PCA + SVM / LDA heads on Cogan S14 data (cross dataset transfer) | Best val acc **27.59%** (Encoder + PCA + LDA). Encoder features ~2x better than raw ECoG (12 to 14% val raw → 24 to 28% with encoder) |
+| **Spatiotemporal CNN** (Flinker et al., 2024) | Tested whether Flinker's CNN encoder produces transferable representations across datasets. Trained Flinker's full a2a → e2a pipeline on HB02 (60 epochs each), froze the encoder, then evaluated whether its features beat raw ECoG on a different dataset (Cogan S14 phoneme classification). PCA + LDA / SVM used as the classification head. | CNN encoder features beat raw ECoG by ~2x (12 to 14% val raw → 24 to 28% with encoder). Best val acc **27.59%** with PCA + LDA head. Confirms the CNN encoder learns generalizable structure. |
 
 ## Repo layout
 
