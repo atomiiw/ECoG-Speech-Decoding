@@ -6,7 +6,9 @@ I compared 4 model architectures for decoding speech from electrocorticography (
 
 ## Poster
 
-[Towards Unconstrained Speech Decoding from ECoG](poster/Towards_Unconstrained_Speech_Decoding_from_ECoG.pdf) (presented at Duke Independent Study Poster Session, December 2025)
+![Towards Unconstrained Speech Decoding from ECoG](poster/poster.png)
+
+[Download PDF](poster/Towards_Unconstrained_Speech_Decoding_from_ECoG.pdf) · presented at Duke Independent Study Poster Session, December 2025
 
 ## Dataset
 
