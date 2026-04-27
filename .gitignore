@@ -15,6 +15,17 @@ MIRepNet/outputs/
 *.pth
 *.pt
 
+# Patient data and intermediate arrays (Cogan/Flinker/Wu lab data are not for public release)
+*.pkl
+*.npy
+*.npz
+*.mat
+*.h5
+*.hdf5
+weight/
+weights/
+checkpoints/
+
 # Python junk
 __pycache__/
 *.pyc
